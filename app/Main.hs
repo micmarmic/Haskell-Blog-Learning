@@ -6,4 +6,4 @@ main :: IO ()
 main = do
   putStrLn ""
   putStrLn ""
-  putStrLn $ html_ "Title" "h1 {color: green}" (h1_ "Hello" <> p_ "This is a paragraph")
+  putStrLn $ render_ $ html_ "Title" "h1 {color: green}" (append_ (h1_ "Hello") (p_ "This is a paragraph"))
